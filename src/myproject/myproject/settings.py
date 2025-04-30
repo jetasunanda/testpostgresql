@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app_landing',
     'app_blog',
 ]
 
@@ -77,8 +76,12 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'USER': '123',
+        'PASSWORD': '123',
+        'NAME': 'sclass2',
+        'PORT': '6543',
+        'HOST': 'localhost',
     }
 }
 
