@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                     );
                 """)
             ], 
-            
+
             reverse_sql=[
                 ("""
                     drop table if exists blog_post;
