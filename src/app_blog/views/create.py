@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from app_blog.utility import query
+# ini menggunakan django raw query
 
 def view(request):
     if request.method == 'POST':
