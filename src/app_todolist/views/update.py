@@ -19,6 +19,6 @@ def view(request, id):
         
         query("UPDATE todolist_post SET task_name = %s, task_deadline = %s, task_detail = %s WHERE id_task = %s", [taskName, taskDeadline, taskDetail, id])
         
-        return redirect(f"/blog/read/{id}")
+        return redirect(f"/todo/read/{id}")
     
     return render(request, "app_todolist/update.html", {"post": post})

@@ -14,7 +14,8 @@
     <ul>
       {% for post in posts %}
       <li>
-        <a href="/todo/read/{{ post.id }}/">{{ post.task_name }}</a> - {{ post.task_deadline }} - {{ post.task_detail }}
+        <a href="/todo/read/{{ post.id_task }}/">{{ post.task_name }}</a> - {{ post.task_deadline }} - {{ post.task_detail }}
+        <a href="{% url 'delete' post.id_task %}" onclick="return confirm('Yakin mau hapus?')">🗑 Hapus</a>
       </li>
       {% endfor %}
     </ul>
