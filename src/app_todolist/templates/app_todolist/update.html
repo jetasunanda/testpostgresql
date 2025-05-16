@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Judul:</label>
+        <input type="text" name="taskName" id="taskName" value="{{ post.task_name }}" required>
+        <br>
+        <label for="title">Judul:</label>
+        <input type="date" name="taskDeadline" id="taskDeadline" value="{{ post.task_name }}" required>
+        <br>
+        <label for="content">Task Detail:</label>
+        <textarea name="taskDetail" id="taskDetail" placeholder="Enter your detail" required>{{ post.task_detail }}</textarea>
+        <br>
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+    <br>
+    <a href="/blog/list/">Kembali ke Daftar Post</a>
+</body>
+</html>
